@@ -1,0 +1,22 @@
+/* h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+} */
+/* 🔹 App Header Styling */
+.app-header {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(90deg, #1976d2, #42a5f5); /* blue gradient */
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}

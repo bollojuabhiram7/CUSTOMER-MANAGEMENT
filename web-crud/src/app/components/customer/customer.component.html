@@ -1,0 +1,708 @@
+<!-- <div class="customer-container">
+  <h2 class="title">✨ Customer Management System</h2> -->
+
+  <!-- Add Customer Form -->
+  <!-- <mat-card class="form-card">
+    <mat-card-title><mat-icon>add</mat-icon> Add Customer</mat-card-title>
+    <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+      <div class="form-grid"> -->
+
+        <!-- First Name -->
+        <!-- <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName" required>
+        </mat-form-field> -->
+
+        <!-- Last Name -->
+        <!-- <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName" required>
+        </mat-form-field> -->
+
+        <!-- Phone -->
+        <!-- <mat-form-field appearance="outline">
+          <mat-label>Phone</mat-label>
+          <input matInput formControlName="phone" required>
+        </mat-form-field> -->
+
+        <!-- Email -->
+        <!-- <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" required>
+        </mat-form-field> -->
+
+        <!-- Address -->
+        <!-- <mat-form-field appearance="outline">
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="address">
+        </mat-form-field> -->
+
+        <!-- City -->
+        <!-- <mat-form-field appearance="outline">
+          <mat-label>City</mat-label>
+          <input matInput formControlName="city">
+        </mat-form-field> -->
+
+        <!-- State -->
+        <!-- <mat-form-field appearance="outline">
+          <mat-label>State</mat-label>
+          <input matInput formControlName="state">
+        </mat-form-field> -->
+
+        <!-- PIN -->
+        <!-- <mat-form-field appearance="outline">
+          <mat-label>PIN</mat-label>
+          <input matInput formControlName="pin">
+        </mat-form-field> -->
+
+        <!-- Account Type -->
+        <!-- <mat-form-field appearance="outline">
+          <mat-label>Account Type</mat-label>
+          <mat-select formControlName="accountType">
+            <mat-option value="savings">Savings</mat-option>
+            <mat-option value="current">Current</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="form-actions">
+        <button mat-raised-button color="primary" type="submit">
+          <mat-icon>person_add</mat-icon> Add Customer
+        </button>
+        <button mat-raised-button color="warn" type="button" (click)="onReset()">
+          <mat-icon>refresh</mat-icon> Reset
+        </button>
+      </div>
+    </form>
+  </mat-card>
+ -->
+  <!-- Search -->
+  <!-- <mat-card class="search-card">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Search customers...</mat-label>
+      <input matInput [(ngModel)]="searchText" placeholder="Enter name, phone, email or city">
+      <button *ngIf="searchText" matSuffix mat-icon-button aria-label="Clear" (click)="searchText=''">
+        <mat-icon>close</mat-icon>
+      </button>
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </mat-card> -->
+
+  <!-- Customers Table -->
+  <!-- <mat-card class="table-card">
+    <table mat-table [dataSource]="filteredCustomers()" class="full-width-table mat-elevation-z2">-->
+
+      <!-- ID -->
+      <!-- <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let customer">{{customer.id}}</td>
+      </ng-container> -->
+
+      <!-- Name -->
+      <!-- <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let customer">{{customer.firstName}} {{customer.lastName}}</td>
+      </ng-container> -->
+      <!-- <ng-container matColumnDef="name">
+  <th mat-header-cell *matHeaderCellDef>Name</th>
+  <td mat-cell *matCellDef="let customer">
+    {{ customer.firstName }} {{ customer.lastName }}
+  </td>
+</ng-container>
+ -->
+
+      <!-- Phone -->
+      <!-- <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef>Phone</th>
+        <td mat-cell *matCellDef="let customer">{{customer.phone}}</td>
+      </ng-container> -->
+
+      <!-- Email -->
+      <!-- <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let customer">{{customer.email}}</td>
+      </ng-container> -->
+
+      <!-- City -->
+      <!-- <ng-container matColumnDef="city">
+        <th mat-header-cell *matHeaderCellDef>City</th>
+        <td mat-cell *matCellDef="let customer">{{customer.city}}</td>
+      </ng-container> -->
+
+      <!-- Account Type -->
+      <!-- <ng-container matColumnDef="accountType">
+        <th mat-header-cell *matHeaderCellDef>Account Type</th>
+        <td mat-cell *matCellDef="let customer">{{customer.accountType}}</td>
+      </ng-container> -->
+
+      <!-- Actions -->
+      <!-- <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let customer">
+          <button mat-stroked-button color="primary" (click)="onEdit(customer)">
+            <mat-icon>edit</mat-icon> Edit
+          </button>
+          <button mat-stroked-button color="warn" (click)="onDelete(customer.id)">
+            <mat-icon>delete</mat-icon> Delete
+          </button>
+        </td>
+      </ng-container> -->
+
+      <!-- <tr mat-header-row *matHeaderRowDef="['id','name','phone','email','city','accountType','actions']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['id','name','phone','email','city','accountType','actions']"></tr>
+    </table>
+  </mat-card> --> 
+  <!-- <mat-card class="table-card">
+  <table mat-table [dataSource]="filteredCustomers()" class="full-width-table mat-elevation-z2"> -->
+
+    <!-- ID -->
+    <!-- <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let customer">{{ customer.id }}</td>
+    </ng-container> -->
+
+    <!-- Name -->
+    <!-- <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let customer">
+        {{ customer.first_name }} {{ customer.last_name }}
+      </td>
+    </ng-container> -->
+
+    <!-- Phone -->
+    <!-- <ng-container matColumnDef="phone">
+      <th mat-header-cell *matHeaderCellDef>Phone</th>
+      <td mat-cell *matCellDef="let customer">{{ customer.phone }}</td>
+    </ng-container> -->
+
+    <!-- Email -->
+    <!-- <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let customer">{{ customer.email }}</td>
+    </ng-container> -->
+
+    <!-- City -->
+    <!-- <ng-container matColumnDef="city">
+      <th mat-header-cell *matHeaderCellDef>City</th>
+      <td mat-cell *matCellDef="let customer">{{ customer.city }}</td>
+    </ng-container> -->
+
+    <!-- Account Type -->
+    <!-- <ng-container matColumnDef="account_type">
+      <th mat-header-cell *matHeaderCellDef>Account Type</th>
+      <td mat-cell *matCellDef="let customer">{{ customer.account_type }}</td>
+    </ng-container> -->
+
+    <!-- Actions -->
+    <!-- <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let customer">
+        <button mat-stroked-button color="primary" (click)="onEdit(customer)">
+          <mat-icon>edit</mat-icon> Edit
+        </button>
+        <button mat-stroked-button color="warn" (click)="onDelete(customer.id)">
+          <mat-icon>delete</mat-icon> Delete
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</mat-card>
+
+
+</div>-->
+
+<!-- 
+<h2>Customer Management System</h2>
+
+<form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>First Name</mat-label>
+    <input matInput formControlName="firstName">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Last Name</mat-label>
+    <input matInput formControlName="lastName">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Phone</mat-label>
+    <input matInput formControlName="phone">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Account Type</mat-label>
+    <mat-select formControlName="accountType">
+      <mat-option value="savings">Savings</mat-option>
+      <mat-option value="current">Current</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">
+    {{ editingCustomerId ? 'Update' : 'Add' }} Customer
+  </button>
+  <button mat-raised-button color="warn" type="button" (click)="onReset()">Reset</button>
+</form>
+
+<table mat-table [dataSource]="customers" class="mat-elevation-z8">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let c"> {{c.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let c"> {{c.firstName}} {{c.lastName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="phone">
+    <th mat-header-cell *matHeaderCellDef> Phone </th>
+    <td mat-cell *matCellDef="let c"> {{c.phone}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Email </th>
+    <td mat-cell *matCellDef="let c"> {{c.email}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="city">
+    <th mat-header-cell *matHeaderCellDef> City </th>
+    <td mat-cell *matCellDef="let c"> {{c.city}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="accountType">
+    <th mat-header-cell *matHeaderCellDef> Account Type </th>
+    <td mat-cell *matCellDef="let c"> {{c.accountType}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Actions </th>
+    <td mat-cell *matCellDef="let c">
+      <button mat-button color="primary" (click)="onEdit(c)">Edit</button>
+      <button mat-button color="warn" (click)="onDelete(c.id)">Delete</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table> -->
+
+
+
+<!-- <h2>Customer Management System</h2>
+
+<form [formGroup]="customerForm" (ngSubmit)="onSubmit()" class="customer-form">-->
+  <!-- First Name -->
+  <!-- <mat-form-field appearance="outline">
+    <mat-label>First Name</mat-label>
+    <input matInput formControlName="firstName" required>
+  </mat-form-field> -->
+
+  <!-- Last Name -->
+  <!-- <mat-form-field appearance="outline">
+    <mat-label>Last Name</mat-label>
+    <input matInput formControlName="lastName" required>
+  </mat-form-field> -->
+
+  <!-- Phone -->
+  <!-- <mat-form-field appearance="outline">
+    <mat-label>Phone</mat-label>
+    <input matInput formControlName="phone" required>
+  </mat-form-field> -->
+
+  <!-- Email -->
+  <!-- <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" required>
+  </mat-form-field> -->
+
+  <!-- Address -->
+  <!-- <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Address</mat-label>
+    <input matInput formControlName="address">
+  </mat-form-field> -->
+
+  <!-- City -->
+  <!-- <mat-form-field appearance="outline">
+    <mat-label>City</mat-label>
+    <input matInput formControlName="city">
+  </mat-form-field> -->
+
+  <!-- State -->
+  <!-- <mat-form-field appearance="outline">
+    <mat-label>State</mat-label>
+    <input matInput formControlName="state">
+  </mat-form-field> -->
+
+  <!-- PIN -->
+  <!-- <mat-form-field appearance="outline">
+    <mat-label>PIN</mat-label>
+    <input matInput formControlName="pin">
+  </mat-form-field> -->
+
+  <!-- Account Type -->
+  <!-- <mat-form-field appearance="outline">
+    <mat-label>Account Type</mat-label>
+    <mat-select formControlName="accountType" required>
+      <mat-option value="savings">Savings</mat-option>
+      <mat-option value="current">Current</mat-option>
+    </mat-select>
+  </mat-form-field> -->
+
+  <!-- Buttons -->
+  <!-- <div class="form-buttons">
+    <button mat-raised-button color="primary" type="submit">
+      {{ editingCustomerId ? 'Update' : 'Add' }} Customer
+    </button>
+    <button mat-raised-button color="warn" type="button" (click)="onReset()">Reset</button>
+  </div>
+</form> -->
+
+<mat-sidenav-container class="sidenav-container" (backdropClick)="closeDrawer()">
+  <mat-sidenav-content>
+<div class="form-container">
+  <form [formGroup]="customerForm">
+    
+    <!-- Name Row -->
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName" required>
+        <!-- Validation messages -->
+        <mat-error *ngIf="customerForm.get('firstName')?.hasError('required')">
+          First Name is required
+        </mat-error>
+        <mat-error *ngIf="customerForm.get('firstName')?.hasError('minlength')">
+          Minimum 3 characters required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lastName" required>
+        <mat-error *ngIf="customerForm.get('lastName')?.hasError('required')">
+          Last Name is required
+        </mat-error>
+        <mat-error *ngIf="customerForm.get('lastName')?.hasError('minlength')">
+          Minimum 3 characters required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <!-- Phone & Email Row -->
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone" required>
+        <!-- Validation messages -->
+        <mat-error *ngIf="customerForm.get('phone')?.hasError('required')">
+          Phone number is required
+        </mat-error>
+        <mat-error *ngIf="customerForm.get('phone')?.hasError('pattern')">
+          Enter a valid 10-digit phone number
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" required>
+        <!-- Validation messages -->
+        <mat-error *ngIf="customerForm.get('email')?.hasError('required')">
+          Email is required
+        </mat-error>
+        <mat-error *ngIf="customerForm.get('email')?.hasError('email')">
+          Enter valid email address
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <!-- Address Row -->
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-field full-width">
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="address">
+        <mat-error *ngIf="customerForm.get('address')?.hasError('required')">
+        Address is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <!-- City & State Row -->
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>City</mat-label>
+        <input matInput formControlName="city">
+        <mat-error *ngIf="customerForm.get('city')?.hasError('required')">
+        City is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>State</mat-label>
+        <input matInput formControlName="state">
+        <mat-error *ngIf="customerForm.get('state')?.hasError('required')">
+        State is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <!-- PIN & Account Type Row -->
+    <div class="form-row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>PIN</mat-label>
+        <input matInput formControlName="pin">
+        <mat-error *ngIf="customerForm.get('pin')?.hasError('required')">
+        PIN CODE is required
+        </mat-error>
+        <mat-error *ngIf="customerForm.get('pin')?.hasError('pattern')">
+          Enter a valid 6 digit pin number
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Account Type</mat-label>
+        <mat-select formControlName="accountType">
+          <mat-option value="savings">Savings</mat-option>
+          <mat-option value="current">Current</mat-option>
+        </mat-select>
+        <mat-error *ngIf="customerForm.get('accountType')?.hasError('required')">
+        Account Type is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <!-- Buttons Row -->
+    <div class="form-row buttons-row">
+      <button
+    mat-raised-button
+    [ngClass]="editingCustomerId ? 'update-btn' : 'add-btn'"
+    (click)="onSubmit()"
+  >
+    {{ editingCustomerId ? 'Update Customer' : 'Add Customer' }}
+  </button>
+
+  <button mat-raised-button class="reset-btn" type="button" (click)="onReset()">
+    Reset
+  </button>
+    </div>
+  </form>
+</div>
+
+
+<div class="search-filters">
+  <mat-form-field>
+    <mat-label>City</mat-label>
+    <input matInput [(ngModel)]="filters.city" placeholder="Search by city">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>State</mat-label>
+    <input matInput [(ngModel)]="filters.state" placeholder="Search by state">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>PIN</mat-label>
+    <input matInput [(ngModel)]="filters.pin" placeholder="Search by PIN">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="searchCustomers()">Search</button>
+  <button mat-raised-button (click)="clearFilters()">Clear</button>
+</div>
+<!-- <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content> -->
+<!-- Customer Table -->
+<table mat-table [dataSource]="customers" class="mat-elevation-z8 full-width-table">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>ID</th>
+    <td mat-cell *matCellDef="let c">{{ c.id }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let c">{{ c.firstName }} {{ c.lastName }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="phone">
+    <th mat-header-cell *matHeaderCellDef>Phone</th>
+    <td mat-cell *matCellDef="let c">{{ c.phone }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef>Email</th>
+    <td mat-cell *matCellDef="let c">{{ c.email }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="city">
+    <th mat-header-cell *matHeaderCellDef>City</th>
+    <td mat-cell *matCellDef="let c">{{ c.city }}</td>
+  </ng-container>
+  <ng-container matColumnDef="addressStatus">
+  <th mat-header-cell *matHeaderCellDef> Address Status </th>
+  <td mat-cell *matCellDef="let c">
+    <mat-chip-listbox>
+    <mat-chip *ngIf="+c.addressCount === 1" color="primary" selected class="chip-small">
+      One Address
+    </mat-chip>
+    <mat-chip *ngIf="+c.addressCount > 1" color="accent" selected class="chip-small">
+      Multiple Addresses ({{ c.addressCount }})
+    </mat-chip>
+    <mat-chip *ngIf="!c.addressCount" color="warn" selected class="chip-small">
+      No Address
+    </mat-chip>
+  </mat-chip-listbox>
+  </td>
+</ng-container>
+
+  <ng-container matColumnDef="accountType">
+    <th mat-header-cell *matHeaderCellDef>Account Type</th>
+    <td mat-cell *matCellDef="let c">{{ c.accountType }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td mat-cell *matCellDef="let c" class="table-actions">
+      <button mat-button class="view-btn" (click)="onView(c)">
+      <mat-icon>visibility</mat-icon> View
+    </button>
+      <button mat-button class="edit-btn" (click)="onEdit(c)">Edit</button>
+      <button mat-button class="delete-btn" (click)="onDelete(c.id)">Delete</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+</mat-sidenav-content>
+
+
+
+<!-- <mat-sidenav #drawer mode="side" position="end" [(opened)]="drawerOpened" class="details-drawer"> -->
+  <mat-sidenav #drawer mode="over" position="end" [(opened)]="drawerOpened" (keydown.escape)="closeDrawer()" class="details-drawer">  
+  <h2>Customer Details</h2>
+    <div class="customer-details" *ngIf="selectedCustomer">
+      <!-- class added by me for extra and h3 also -->
+      <h3><mat-icon color="primary">person</mat-icon> Customer Details</h3>
+      <p><strong>ID:</strong> {{ selectedCustomer.id }}</p>
+      <p><strong>Name:</strong> {{ selectedCustomer.firstName }} {{ selectedCustomer.lastName }}</p>
+      <p><strong>Phone:</strong> {{ selectedCustomer.phone }}</p>
+      <p><strong>Email:</strong> {{ selectedCustomer.email }}</p>
+      <p><strong>City:</strong> {{ selectedCustomer.city }}</p>
+      <p><strong>State:</strong> {{ selectedCustomer.state }}</p>
+      <p><strong>PIN:</strong> {{ selectedCustomer.pin }}</p>
+      <p><strong>Account Type:</strong> {{ selectedCustomer.accountType }}</p>
+      <p><strong>Address Count:</strong>{{ selectedCustomer.addressCount }}</p>
+      <!-- <button mat-raised-button color="warn" (click)="drawerOpened = false">Close</button> -->
+       <button mat-raised-button class="clear-btn" (click)="closeDrawer()">
+      <!-- ✖ Close -->
+       <mat-icon>close</mat-icon> Close
+    </button>
+    <hr />
+
+    <!-- ================= Addresses Section ================= -->
+    <h3><mat-icon color="primary">home</mat-icon> Addresses</h3>
+
+    <!-- Address List -->
+    <mat-list *ngIf="addresses.length > 0; else noAddresses">
+      <mat-list-item *ngFor="let addr of addresses">
+        <div class="address-item">
+          <p>
+            {{ addr.addressLine }}, {{ addr.city }}, {{ addr.state }} -
+            {{ addr.pin }}
+          </p>
+          <p><em>Account Type: {{ addr.accountType }}</em></p>
+
+          <div class="address-actions">
+            <button
+              mat-mini-button
+              color="primary"
+              (click)="updateAddress(addr)"
+            >
+              Update
+            </button>
+            <button
+              mat-mini-button
+              color="warn"
+              (click)="deleteAddress(addr.id)"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </mat-list-item>
+    </mat-list>
+
+    <ng-template #noAddresses>
+      <p class="no-data">No addresses available.</p>
+    </ng-template>
+
+    <hr />
+
+    <!-- Add Address Form -->
+    <h3>Add New Address</h3>
+    <form [formGroup]="addressForm" (ngSubmit)="addAddress()">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Address Line</mat-label>
+        <input matInput formControlName="addressLine" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>City</mat-label>
+        <input matInput formControlName="city" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>State</mat-label>
+        <input matInput formControlName="state" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>PIN</mat-label>
+        <input matInput formControlName="pin" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Account Type</mat-label>
+        <mat-select formControlName="accountType">
+          <mat-option value="savings">Savings</mat-option>
+          <mat-option value="current">Current</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="buttons-row">
+        <button mat-raised-button color="primary" type="submit">
+          Add Address
+        </button>
+      </div>
+    </form>
+  </div>
+  </mat-sidenav>
+</mat-sidenav-container>
+<!-- Customer Details -->
+<!-- Customer Details -->
+<!-- <div *ngIf="selectedCustomer" class="customer-details-card">
+  <h3>👤 Customer Details</h3>
+
+  <div class="detail-row"><strong>ID:</strong> {{ selectedCustomer.id }}</div>
+  <div class="detail-row"><strong>Name:</strong> {{ selectedCustomer.firstName }} {{ selectedCustomer.lastName }}</div>
+  <div class="detail-row"><strong>Phone:</strong> {{ selectedCustomer.phone }}</div>
+  <div class="detail-row"><strong>Email:</strong> {{ selectedCustomer.email }}</div>
+  <div class="detail-row"><strong>Address:</strong> {{ selectedCustomer.address }}</div>
+  <div class="detail-row"><strong>City:</strong> {{ selectedCustomer.city }}</div>
+  <div class="detail-row"><strong>State:</strong> {{ selectedCustomer.state }}</div>
+  <div class="detail-row"><strong>PIN:</strong> {{ selectedCustomer.pin }}</div>
+  <div class="detail-row"><strong>Account Type:</strong> {{ selectedCustomer.accountType }}</div>
+
+  <div class="details-actions">
+    <button mat-raised-button class="clear-btn" (click)="clearDetails()">
+      ✖ Clear Details
+    </button>
+  </div>
+</div> -->

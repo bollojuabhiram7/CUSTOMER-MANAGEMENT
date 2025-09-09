@@ -1,0 +1,601 @@
+/* Customer Form & Table Styling */
+// .customer-container {
+//   max-width: 1200px;
+//   margin: auto;
+//   padding: 20px;
+// }
+
+// .form-card,
+// .search-card,
+// .table-card {
+//   margin-bottom: 20px;
+//   padding: 20px;
+// }
+
+// .form-grid {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+//   gap: 15px;
+// }
+
+// .form-actions {
+//   margin-top: 20px;
+//   display: flex;
+//   gap: 15px;
+// }
+
+
+
+
+
+
+
+
+// .form-container {
+//   display: flex;
+//   justify-content: center;
+//   padding: 20px;        /* spacing around the form */
+//   width: 100%;
+//   box-sizing: border-box;
+// }
+
+// form {
+//   width: 100%;
+//   max-width: 800px;     /* slightly reduced for better balance */
+//   background: #fff;     /* white background */
+//   padding: 24px;        /* padding inside the form */
+//   border-radius: 12px;  /* smooth rounded edges */
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* subtle shadow */
+// }
+
+// .form-row {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 20px;            /* more breathing space between fields */
+//   margin-bottom: 20px;
+// }
+
+// .form-field {
+//   flex: 1;
+//   min-width: 240px;     /* slightly wider for readability */
+// }
+
+// .full-width {
+//   flex: 1 1 100%;
+// }
+
+
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form {
+  width: 100%;
+  max-width: 800px;
+  background: #fff;
+  padding: 20px;           /* reduced from 24px */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* slightly lighter shadow */
+}
+
+// .form-row {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 14px;               /* reduced from 20px */
+//   margin-bottom: 14px;     /* reduced from 20px */
+// }
+
+// .form-row {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 10px !important;       /* force smaller gap */
+//   margin-bottom: 0% !important; 
+// }
+
+form {
+  width: 100%;
+  max-width: 800px;
+  //background: #91e1ed;
+  background: #fff;
+  padding: 20px;           /* reduced from 24px */
+  border-radius: 2rem;
+  box-shadow: 0 4px 12px rgba(60, 180, 213, 0.978);
+  padding: 12px !important;   /* reduce inside padding */
+}
+
+.form-row {
+  display:flex;
+  gap: 16px;               /* space between fields */
+  //margin-bottom: 12px;     /* space between rows */
+  flex-wrap: wrap;         /* stack fields on small screens */
+  justify-content: center; /* center align inside parent */
+}
+
+.form-field {
+  flex: 1;
+  min-width: 220px;        /* adjusted a bit smaller */
+}
+
+.full-width {
+  flex: 1 1 100%;
+}
+
+
+.buttons-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+
+// /* 🔹 Curved inputs */
+// mat-form-field {
+//   width: 50%;
+// }
+
+// .mat-mdc-text-field-wrapper {
+//   border-radius: 2rem !important;  
+// }
+
+// .mat-mdc-form-field-flex {
+//   border-radius: 2rem !important;
+// }
+
+// input, textarea, select {
+//   border-radius: 2rem !important;
+// }
+
+
+
+/* 🔹 Each form-field wrapper */
+.form-field {
+  flex: 1;
+  min-width: 220px;
+}
+
+// /* 🔹 Apply rounded corners to outlined fields */
+// .form-field .mdc-notched-outline {
+//   border-radius: 99px ;   /* curve outline */
+// }
+
+// /* 🔹 Ensure input box respects curve */
+.form-field .mat-mdc-form-field-flex {
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+// /* 🔹 Input/textarea inside field */
+// .form-field input.mat-mdc-input-element,
+// .form-field textarea.mat-mdc-input-element {
+//   border-radius: 12px !important;
+// }
+
+.form-field .mdc-notched-outline__leading,
+.form-field .mdc-notched-outline__notch,
+.form-field .mdc-notched-outline__trailing {
+  border-radius: 2rem !important;   /* change 12px to 99px for pill shape */
+}
+
+/* 🔹 Curve the entire outlined border */
+// .form-field .mdc-notched-outline,
+// .form-field .mdc-notched-outline__leading,
+// .form-field .mdc-notched-outline__notch,
+// .form-field .mdc-notched-outline__trailing {
+//   border-radius: 1px !important;  /* pill shape */
+// }
+
+/* 🔹 Also curve the input container itself */
+// .form-field .mat-mdc-form-field-flex {
+//   border-radius: 99px !important;
+//   overflow: hidden;  /* prevents sharp corners peeking */
+// }
+.form-field input.mat-mdc-input-element,
+.form-field textarea.mat-mdc-input-element {
+  border-radius: 99px ;   /* pill-shaped input */
+}
+.form-field .mat-mdc-select-trigger {
+  border-radius: 99px !important;
+}
+
+
+
+
+
+/* 🔹 Button Row */
+.buttons-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* 🔹 Add Button */
+.add-btn {
+  background-color: #1976d2 !important; /* blue */
+  color: white !important;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.add-btn:hover {
+  background-color: #1565c0 !important;
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Update Button */
+.update-btn {
+  background-color: #ff9800 !important; /* orange */
+  color: white !important;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.update-btn:hover {
+  background-color: #fb8c00 !important;
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Reset Button */
+.reset-btn {
+  background-color: #f44336 !important; /* red */
+  color: white !important;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.reset-btn:hover {
+  background-color: #d32f2f !important;
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+// /* Table Styling */
+// .full-width-table {
+//   width: 100%;
+//   border-collapse: collapse;
+// }
+
+// mat-header-cell,
+// mat-cell {
+//   padding: 10px;
+// }
+
+
+
+// /* Action Buttons */
+// .edit-btn {
+//   background-color: #1976d2;
+//   color: white;
+//   margin-right: 8px;
+//   border-radius: 4px;
+//   font-size: 13px;
+// }
+
+// .edit-btn:hover {
+//   background-color: #1565c0;
+// }
+
+// .delete-btn {
+//   background-color: #d32f2f;
+//   color: white;
+//   border-radius: 4px;
+//   font-size: 13px;
+// }
+
+// .delete-btn:hover {
+//   background-color: #b71c1c;
+// }
+
+// /* Snackbar Styles */
+// .snackbar-success {
+//   background-color: #4caf50 !important;
+//   color: #fff !important;
+// }
+
+// .snackbar-error {
+//   background-color: #f44336 !important;
+//   color: #fff !important;
+// }
+
+// .customer-details {
+//   margin-top: 20px;
+//   padding: 20px;
+//   border-radius: 8px;
+//   background: #fafafa;
+//   border: 1px solid #ddd;
+// }
+
+// .customer-details h3 {
+//   margin-bottom: 15px;
+//   color: #3f51b5;
+// }
+
+// .details-actions {
+//   margin-top: 15px;
+// }
+
+
+
+/* 🔹 Table Container */
+// .full-width-table {
+//   width: 100%;
+//   border-collapse: collapse;
+//   margin-top: 20px;
+//   background: #fff;
+//   border-radius: 10px;
+//   overflow: hidden;
+//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+// }
+
+// /* 🔹 Header Cells */
+// mat-header-cell {
+//   padding: 12px;
+//   font-weight: 600;
+//   background: #1976d2;
+//   color: #fff;
+//   font-size: 14px;
+//   text-align: left;
+// }
+
+// /* 🔹 Data Cells */
+// mat-cell {
+//   padding: 12px;
+//   font-size: 14px;
+//   border-bottom: 1px solid #eee;
+// }
+
+// /* 🔹 Row Hover Effect */
+// mat-row:hover {
+//   background-color: #f5f5f5;
+//   transition: background 0.2s ease-in-out;
+// }
+
+
+.full-width-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* 🔹 Header Cells */
+.full-width-table th.mat-header-cell {
+  padding: 12px;
+  font-weight: 600;
+  background: #1976d2;
+  color: #fff;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* 🔹 Data Cells */
+.full-width-table td.mat-cell {
+  padding: 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+/* 🔹 Row Hover Effect */
+.full-width-table tr.mat-row:hover {
+  background-color: #f5f5f5;
+  transition: background 0.2s ease-in-out;
+}
+
+
+/* Action Buttons */
+.table-actions button {
+  border-radius: 20px;         /* curve */
+  font-size: 13px;
+  padding: 6px 12px;
+  margin-right: 6px;
+  //transition: 0.2s ease-in-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.table-actions button:hover {
+  transform: scale(1.08);              /* pop */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* soft shadow */
+}
+
+/* View Button */
+.table-actions .view-btn {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+.table-actions .view-btn:hover {
+  background: #bbdefb;
+}
+
+/* Edit Button */
+.table-actions .edit-btn {
+  background: #1976d2;
+  color: white;
+}
+.table-actions .edit-btn:hover {
+  background: #1565c0;
+}
+
+/* Delete Button */
+.table-actions .delete-btn {
+  background: #f44336;
+  color: white;
+}
+.table-actions .delete-btn:hover {
+  background: #d32f2f;
+}
+
+/* 🔹 Customer Details Card */
+
+
+
+// .customer-details-card {
+//   margin-top: 20px;
+//   padding: 20px;
+//   border-radius: 12px;
+//   background: #ffffff;
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+//   border-left: 6px solid #1976d2;
+//   max-width: 600px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   transition: transform 0.2s ease-in-out;
+// }
+
+// .customer-details-card:hover {
+//   transform: scale(1.02);
+// }
+
+// /* 🔹 Heading */
+// .customer-details-card h3 {
+//   margin-bottom: 15px;
+//   color: #1976d2;
+//   font-size: 20px;
+//   display: flex;
+//   align-items: center;
+//   gap: 8px;
+// }
+
+// /* 🔹 Detail Rows */
+// .detail-row {
+//   font-size: 15px;
+//   margin: 6px 0;
+//   padding: 6px 10px;
+//   border-bottom: 1px dashed #e0e0e0;
+// }
+
+// .detail-row strong {
+//   color: #444;
+//   margin-right: 6px;
+// }
+
+// /* 🔹 Clear Button */
+// .clear-btn {
+//   margin-top: 15px;
+//   background-color: #f44336 !important;
+//   color: white !important;
+//   border-radius: 20px;
+//   padding: 6px 16px;
+//   font-weight: 500;
+//   transition: transform 0.2s ease, box-shadow 0.2s ease;
+// }
+// .clear-btn:hover {
+//   background-color: #d32f2f !important;
+//   transform: scale(1.08);
+//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+// }
+
+
+
+
+
+/*
+.sidenav-container {
+  height: 100%;
+}
+
+.details-drawer {
+  width: 350px;
+  padding: 20px;
+  background: #fafafa;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+}
+
+
+// /* 🔹 Clear Button
+.clear-btn {
+  margin-top: 15px;
+  background-color: #f44336 !important;
+  color: white !important;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.clear-btn:hover {
+  background-color: #d32f2f !important;
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}*/
+
+.sidenav-container {
+  height: 100%;
+}
+
+.details-drawer {
+  width: 400px; /* side panel width */
+  padding: 20px;
+  background: #fff;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+   transition: transform 0.3s ease-in-out;
+}
+
+.customer-details h3 {
+  color: #1976d2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.customer-details p {
+  margin: 6px 0;
+  font-size: 14px;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 4px;
+}
+
+
+
+.details-drawer {
+  width: 400px;
+  padding: 16px;
+  background: #fff;
+}
+
+.customer-details h3 {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  color: #3f51b5;
+}
+
+.address-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.address-actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.no-data {
+  color: #777;
+  font-style: italic;
+}
+.chip-small {
+  font-size: 12px;
+  height: 22px;
+  border-radius: 16px; /* fully rounded */
+  padding: 0 8px;
+}
