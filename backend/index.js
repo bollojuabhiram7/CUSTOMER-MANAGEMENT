@@ -7,8 +7,8 @@ const logger = require('./logger');
 const app = express();
 const PORT = 3000;
 
-app.use(cors());
-app.options("*", cors()); 
+app.use(cors({ origin: "*" }));
+
 app.use(express.json());
 app.use(morgan('dev'));
 
